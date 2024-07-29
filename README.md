@@ -23,4 +23,4 @@ source start.sh
 source stop.sh
 ```
 
-#### Проект будет развёрнут по адресу http://localhost/docs/ <br><br>
+#### Проект будет развёрнут по адресу http://localhost:8000/docs/ <br><br>
