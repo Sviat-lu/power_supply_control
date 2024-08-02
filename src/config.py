@@ -1,12 +1,9 @@
-"""
-    IP - The IP address where the device is accessible
-    PORT - The port where the device is accessible
-    MODE - Application operation mode. Two options are available:
-        "test"      : for running without the connected device
-        "production": for running with the connected device
-"""
+import os
+from dotenv import load_dotenv
+
+load_dotenv(override=True)
 
 
-IP = "192.168.0.100"
-PORT = 1357
-MODE = "test"
+IP = os.getenv('IP')
+PORT = os.getenv('PORT')
+MODE = os.getenv('MODE')
