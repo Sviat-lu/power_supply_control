@@ -14,12 +14,12 @@ def send_command(command: str) -> str:
         with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
             # Connect the socket to the server's address and port
             s.connect((IP, PORT))
-            logger.info("Device successfully connected")  # Log successful connection
+            logger.info("Device successfully connected")
 
             # Send the command to the device, encoding it in ASCII
             s.sendall(command.encode('ascii'))
 
-            # Receive the response from the device, decoding it back to a string
+            # Receive the response from the device, decoding it back to string
             response = s.recv(1024).decode
             return response
             

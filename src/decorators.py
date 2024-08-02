@@ -10,8 +10,8 @@ from .loggers import logger
 def mode_decorator(func: Callable):
     """
     A decorator to handle different operating modes (test and production).
-    
-    This decorator checks the current mode and decides whether to execute the 
+
+    This decorator checks the current mode and decides whether to execute the
     original function or to send a command directly. It raises an if 
     the mode is incorrect.
     """

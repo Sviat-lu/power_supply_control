@@ -1,5 +1,5 @@
-# This module handles the management of device channels, including reading from a file,
-# applying changes, and resetting to default settings if necessary.
+# This module handles the management of device channels, including reading 
+# from a file,applying changes, and resetting to default settings if necessary.
 
 from typing import Dict
 import os

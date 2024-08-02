@@ -12,7 +12,8 @@ async def source_on_ps(data: SourceOn) -> Dict:
     Turn on a specified channel and update its voltage and current settings.
     
     Args:
-        data (SourceOn): The data containing channel number, voltage, and current.
+        data (SourceOn): The data containing channel number, voltage, 
+        and current.
     
     Returns:
         Dict: The updated state of specified channel.

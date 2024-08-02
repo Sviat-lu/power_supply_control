@@ -8,7 +8,8 @@ ACCEPTED_START_COMMANDS = ("min", "minimum", "max", "maximum")
 
 def validate_channel(field: int) -> int:
     """
-    Validates the channel number to ensure it is within the acceptable range (0-3).
+    Validates the channel number to ensure it is within the acceptable 
+    range (0-3).
     
     Raises a RequestValidationError if the channel is out of range.
     """
@@ -22,7 +23,8 @@ def voltage_and_current_validator(
     field: Union[float, str], max_value: int, err_message: str
 ) -> Union[float, str]:
     """
-    Validates voltage and current values to ensure they are within the specified range.
+    Validates voltage and current values to ensure they are within 
+    the specified range.
     
     Accepts both float values and specific string commands. 
     Raises a RequestValidationError if invalid.
@@ -43,9 +45,11 @@ def voltage_and_current_validator(
 
 def prepare_all_channels_response_data(data: Dict) -> Dict:
     """
-    Prepares the response data for all channels by formatting it into a list of dictionaries.
+    Prepares the response data for all channels by formatting it into a list
+    of dictionaries.
     
-    Each dictionary contains channel information including output, voltage, and current.
+    Each dictionary contains channel information including output, voltage,
+    and current.
     """
     all_channels_list = []
     for k, v in data.items():

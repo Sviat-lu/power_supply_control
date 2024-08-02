@@ -23,7 +23,8 @@ async def source_on_command(command: str, data: SourceOn) -> Dict:
     
     Args:
         command (str): The command string received.
-        data (SourceOn): The data containing channel number, voltage, and current.
+        data (SourceOn): The data containing channel number, voltage, 
+        and current.
     
     Returns:
         Dict: The updated state of the specified channel.
