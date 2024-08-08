@@ -3,7 +3,7 @@
 
 from typing import Dict
 
-from src.schemas import SourceOn
+from schemas import SourceOn
 from .file_handlers import apply_changes, get_all_channels
 
 

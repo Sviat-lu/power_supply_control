@@ -2,9 +2,9 @@ from typing import Callable
 
 from fastapi import HTTPException, status
 
-from .config import MODE
-from .handlers.command_handlers import send_command
-from .loggers import logger
+from config import MODE
+from handlers import send_command
+from utils import logger
 
 
 def mode_decorator(func: Callable):

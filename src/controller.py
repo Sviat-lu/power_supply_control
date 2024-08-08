@@ -5,15 +5,15 @@
 
 from typing import Dict
 
-from .decorators import mode_decorator
-from .handlers.ps_handlers import (
+from decorators import mode_decorator
+from handlers import (
     get_state_all_channels_ps,
     get_state_current_channel_ps,
     source_off_ps,
     source_on_ps,
 )
-from .loggers import logger
-from .schemas import SourceOn
+from utils import logger
+from schemas import SourceOn
 
 
 @mode_decorator

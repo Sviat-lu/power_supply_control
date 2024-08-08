@@ -1,9 +1,10 @@
 from typing import Dict, Union
 from fastapi.exceptions import RequestValidationError
 
-from .loggers import logger
+from utils import logger
 
-ACCEPTED_START_COMMANDS = ("min", "minimum", "max", "maximum")
+MIN_VALUES = ("min", "minimum")
+MAX_VALUES = ("max", "maximum")
 
 
 def validate_channel(field: int) -> int:
@@ -32,14 +33,16 @@ def voltage_and_current_validator(
     if isinstance(field, float) and (field < 0 or field > max_value):
         logger.warning("Value out of range")
         raise RequestValidationError(err_message)
-    elif (
-        isinstance(field, str)
-        and field.lower() not in ACCEPTED_START_COMMANDS
-    ):
-        logger.warning("Incorrect current value")
-        raise RequestValidationError(
-            "Integers, floats and min/max available"
-        )
+    elif isinstance(field, str):
+        if field.lower() in MIN_VALUES:
+            return 0
+        elif field.lower() in MAX_VALUES:
+            return max_value
+        else:
+            logger.warning("Incorrect current or voltage value")
+            raise RequestValidationError(
+                "Integers, floats and min/max available"
+            )
     return field
 
 

@@ -1,12 +1,12 @@
 from fastapi import APIRouter, status
 
-from src.schemas import (
+from schemas import (
     AllChannelsResponse,
     CurrentChannelResponse,
     SourceOn,
     CurrentChannel,
 )
-from src.controller import (
+from controller import (
     get_state_all_channels_command,
     get_state_current_channel_command,
     source_on_command,

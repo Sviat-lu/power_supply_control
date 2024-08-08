@@ -4,8 +4,8 @@ import socket
 
 from fastapi import HTTPException, status
 
-from src.config import IP, PORT
-from src.loggers import logger
+from config import IP, PORT
+from utils import logger
 
 
 def send_command(command: str) -> str:

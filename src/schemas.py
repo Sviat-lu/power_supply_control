@@ -1,7 +1,7 @@
 from typing import Dict, List, Union
 from pydantic import BaseModel, field_validator, model_validator
 
-from .validators import (
+from validators import (
     prepare_all_channels_response_data,
     validate_channel,
     voltage_and_current_validator,

@@ -11,4 +11,4 @@ RUN python -m pip --no-cache-dir install poetry==1.8.3 \
 
 COPY . .
 
-CMD [ "python3", "main.py"]
+CMD [ "python3", "src/main.py"]
